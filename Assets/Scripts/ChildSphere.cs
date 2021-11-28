@@ -18,7 +18,6 @@ public class ChildSphere : ParentSphere
         {
             Debug.Log("Clicked the sphere");
             isClicked = true;
-            //gameObject.GetComponent<MeshRenderer>().material = changeMaterial;
             StartCoroutine(ResetGameObject());
         }
     }

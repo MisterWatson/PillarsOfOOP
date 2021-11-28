@@ -23,7 +23,7 @@ public class ParentSphere : MonoBehaviour
             Debug.Log("Clicked the sphere");
             isClicked = true;
             gameObject.GetComponent<MeshRenderer>().material = changeMaterial;
-            StartCoroutine(ResetGameObject());
+            StartCoroutine(ResetGameObject()); // ABSTRACTION
         }
     }
 
