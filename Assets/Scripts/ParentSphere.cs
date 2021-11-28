@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ParentSphere : MonoBehaviour
 {
-    [SerializeField] private Material originalMaterial; // ENCAPSULATION
-    [SerializeField] private Material changeMaterial; 
+    [SerializeField] protected Material originalMaterial; // ENCAPSULATION
+    [SerializeField] protected Material changeMaterial; 
 
     [SerializeField] protected int resetTimer = 3;
 
@@ -16,7 +16,7 @@ public class ParentSphere : MonoBehaviour
         originalMaterial = gameObject.GetComponent<MeshRenderer>().material;
     }
 
-    private void OnMouseDown() // POLYMORPHISM
+    protected virtual void OnMouseDown() // POLYMORPHISM
     {
         if (isClicked == false)
         {
